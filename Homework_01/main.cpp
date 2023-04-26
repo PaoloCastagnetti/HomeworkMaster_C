@@ -8,8 +8,10 @@ void myPrint(string _words) {
 
 int main() {
 
-	int firtsIntVariable = 10;
-	int secondIntVariable = 0x10, thirdIntVariable = 010;
+	int base10Variable = 10; //variabile in base 10 contenente il valore 10
+	int base16Variable = 0x10; //variabile in base 16 contenente il valore 16
+	int base8Variable = 011; //variabile in base 8 contenente il valore 9
+	int base2Variable = 0b11; // variabile in base 2 contenente il valore 3
 	float firstFloatVariable = 1.f, secondFloatVariable = 1, thirdfloatVariable = 1.0;
 
 	// Error example: Bad declaration

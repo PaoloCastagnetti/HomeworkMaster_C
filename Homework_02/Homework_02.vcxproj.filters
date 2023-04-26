@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="homework2.h">
+    <ClInclude Include="homework2.hpp">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>

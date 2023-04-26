@@ -1,5 +1,4 @@
-#include "homework2.h"
-using namespace std;
+#include "homework2.hpp"
 
 int main() {
 	
@@ -16,11 +15,12 @@ int main() {
 		int dimDouble = sizeof(double);
 	}*/
 
-	//C like for 
+	//C for 
 	/*{
 		int pointer[5];
 		unsigned int dimPointer = sizeof(pointer);
-		for (unsigned int i = 0; i < dimPointer / sizeof(int); ++i) {
+		unsigned int dimArray = dimPointer / sizeof(int)
+		for (unsigned int i = 0; i < dimArray; ++i) {
 			//printf("i = %d\n", i);
 		}
 	}*/

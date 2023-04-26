@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+//#include <stdlib.h> (not used)
+//#include <math.h> (not used)
 #include <limits.h>
-#include <iostream>
+//#include <iostream> (not used)
 
 //void function1() {
 //	return 0;
@@ -17,10 +17,12 @@
 //}
 
 bool nearlyEqual(float firstVar, float secondVar, float _precision) {
-	if (firstVar - secondVar <= _precision)
+	//if statement skipped
+	/*if (firstVar - secondVar <= _precision)
 		return true;
 	else
-		return false;
+		return false;*/
+	return (firstVar - secondVar <= _precision);
 }
 
 //Documentazione (stessa di unreal)
@@ -32,22 +34,26 @@ bool nearlyEqual(float firstVar, float secondVar, float _precision) {
 * @return Cosa ritorna la funzione
 */
 
-int checkPointOnBox(int X1, int X2, int Y1, int Y2, int Xp, int Yp) {
-	if ((Xp >= X1 && Xp <= X2) && (Yp >= Y1 && Yp <= Y2))
+bool checkPointOnBox(int X1, int X2, int Y1, int Y2, int Xp, int Yp) {
+	//if statement skipped
+	/*if ((Xp >= X1 && Xp <= X2) && (Yp >= Y1 && Yp <= Y2))
 		return 1;
-	return 0;
+	return 0;*/
+	return ((Xp >= X1 && Xp <= X2) && (Yp >= Y1 && Yp <= Y2));
 }
 
-int checkPointOnBox(float X1, float X2, float Y1, float Y2, float Xp=0, float Yp=0) {
-	if ((Xp >= X1 && Xp <= X2) && (Yp >= Y1 && Yp <= Y2))
+bool checkPointOnBox(float X1, float X2, float Y1, float Y2, float Xp=0, float Yp=0) {
+	//if statement skipped
+	/*if ((Xp >= X1 && Xp <= X2) && (Yp >= Y1 && Yp <= Y2))
 		return 1;
-	return 0;
+	return 0;*/
+	return ((Xp >= X1 && Xp <= X2) && (Yp >= Y1 && Yp <= Y2));
 }
 
 void homeworkFunction() {
 	//Homeworks
 	//Declare a few variables and perform basic math with them. Notice how implicit and explicit cast work.
-	{
+{
 		int a = 5;
 		int b = 10;
 		int c = a + b;
@@ -63,7 +69,7 @@ void homeworkFunction() {
 		//shifting
 		int firstVar = 1;
 		int secondVar = firstVar << 2;
-	}
+	}	
 
 	//Mix types in expressions, until the general rule for implicit casts is clear
 	{
@@ -93,7 +99,9 @@ void homeworkFunction() {
 		float b = 1.f;
 		int c = 010;
 		char d = 'a';
-		int ris = int(a + b + c + d);
+		//int ris = int(a + b + c + d);
+		//Better implementation
+		int ris = a + int(b) + c + d;
 		int z = 0;
 	}
 

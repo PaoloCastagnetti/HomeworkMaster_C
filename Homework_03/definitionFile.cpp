@@ -2,6 +2,9 @@
 // definitionFile of myLibrary.h
 //----------
 
+#ifndef myLibrary_Definition
+#define myLibrary_Definition
+
 //definition of an adding function for eventually float variables
 int integerAddingFunction(int firstValue, int secondValue) {
 	return (firstValue + secondValue);
@@ -51,3 +54,5 @@ void floatVariableSwap(float* firstVar, float* secondVar) {
 	*secondVar = *firstVar;
 	*firstVar = tmp;
 }
+
+#endif // !myLibrary_Definition

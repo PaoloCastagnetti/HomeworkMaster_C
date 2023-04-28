@@ -6,3 +6,5 @@ int integerAddingFunction(int firstValue, float secondValue);
 int integerPow(int base, int exponent);
 
 int integerClamp(int minValue, int maxValue, int value);
+
+void variableSwap(int* firstVar, int* secondVar);

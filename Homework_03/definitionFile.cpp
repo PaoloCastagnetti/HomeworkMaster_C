@@ -19,11 +19,19 @@ int integerPow(int base, int exponent) {
 	return result;
 }
 
-//definition of
+//definition of integerClamp
 int integerClamp(int minValue, int maxValue, int value) {
 	if (value >= minValue && value <= maxValue) {
 		return value;
 	}
 	if (value < minValue) return minValue;
 	if (value > maxValue) return maxValue;
+	return 0;
+}
+
+//definition of variableSwap
+void variableSwap(int* firstVar, int* secondVar) {
+	int tmp = *secondVar;
+	*secondVar = *firstVar;
+	*firstVar = tmp;
 }

@@ -75,6 +75,17 @@ int main(int argc, char** argv) {
 		printf("Clamp result: %d\n", clampResult);
 	}
 
+	//Testing variableSwap()
+	{
+		int firstValue = 1, secondValue = 2;
+		printf("First value: %d\n", firstValue);
+		printf("Second value: %d\n", secondValue);
+
+		variableSwap(&firstValue, &secondValue);
+
+		printf("First value: %d\n", firstValue);
+		printf("Second value: %d\n", secondValue);
+	}
 
 	return 0;
 }

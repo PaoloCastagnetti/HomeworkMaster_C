@@ -128,10 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="secondFile.cpp" />
+    <ClCompile Include="definitionFile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="testLibrary.h" />
+    <ClInclude Include="myLibrary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

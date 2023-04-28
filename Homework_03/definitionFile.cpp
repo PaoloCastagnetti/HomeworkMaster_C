@@ -1,3 +1,6 @@
+//----------
+// definitionFile of myLibrary.h
+//----------
 
 //definition of an adding function for eventually float variables
 int integerAddingFunction(int firstValue, int secondValue) {
@@ -28,10 +31,23 @@ int integerClamp(int minValue, int maxValue, int value) {
 	if (value > maxValue) return maxValue;
 	return 0;
 }
+float floatClamp(float minValue, float maxValue, float value) {
+	if (value >= minValue && value <= maxValue) {
+		return value;
+	}
+	if (value < minValue) return minValue;
+	if (value > maxValue) return maxValue;
+	return 0.f;
+}
 
 //definition of variableSwap
-void variableSwap(int* firstVar, int* secondVar) {
+void integerVariableSwap(int* firstVar, int* secondVar) {
 	int tmp = *secondVar;
+	*secondVar = *firstVar;
+	*firstVar = tmp;
+}
+void floatVariableSwap(float* firstVar, float* secondVar) {
+	float tmp = *secondVar;
 	*secondVar = *firstVar;
 	*firstVar = tmp;
 }

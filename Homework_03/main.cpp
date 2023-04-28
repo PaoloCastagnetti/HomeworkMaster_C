@@ -72,19 +72,38 @@ int main(int argc, char** argv) {
 	{
 		int value = 1000, min = 0, max = 100;
 		int clampResult = integerClamp(min, max, value);
-		printf("Clamp result: %d\n", clampResult);
+		printf("Integer clamp result: %d\n", clampResult);
 	}
 
-	//Testing variableSwap()
+	//Testing floatClamp()
+	{
+		float value = 1000.f, min = 0.f, max = 100.f;
+		float clampResult = floatClamp(min, max, value);
+		printf("Float clamp result: %f\n", clampResult);
+	}
+
+	//Testing integerVariableSwap()
 	{
 		int firstValue = 1, secondValue = 2;
 		printf("First value: %d\n", firstValue);
 		printf("Second value: %d\n", secondValue);
 
-		variableSwap(&firstValue, &secondValue);
+		integerVariableSwap(&firstValue, &secondValue);
 
 		printf("First value: %d\n", firstValue);
 		printf("Second value: %d\n", secondValue);
+	}
+
+	//Testing floatVariableSwap()
+	{
+		float firstValue = 10.f, secondValue = 2.f;
+		printf("First value: %f\n", firstValue);
+		printf("Second value: %f\n", secondValue);
+
+		floatVariableSwap(&firstValue, &secondValue);
+
+		printf("First value: %f\n", firstValue);
+		printf("Second value: %f\n", secondValue);
 	}
 
 	return 0;

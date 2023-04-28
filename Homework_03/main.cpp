@@ -45,6 +45,14 @@
 * 
 */
 
+//How to write documentation
+/*
+* @brief Function description
+* @param firstParam explanation
+* @param secondParam explanation
+* @return returnValue explanation
+*/
+
 #include "myLibrary.h"
 #include <stdio.h>
 

@@ -18,3 +18,12 @@ int integerPow(int base, int exponent) {
 	}
 	return result;
 }
+
+//definition of
+int integerClamp(int minValue, int maxValue, int value) {
+	if (value >= minValue && value <= maxValue) {
+		return value;
+	}
+	if (value < minValue) return minValue;
+	if (value > maxValue) return maxValue;
+}

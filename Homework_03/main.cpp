@@ -23,7 +23,12 @@
 * Ottiene l'indirizzo di memoria della variabile
 * int var1 = 10;
 * int* pVar1= &var1;
+* 
+* *pVar2 = 1997;
+* se la zona di memoria presa da pVar2 è linkata anche a delle variabili 
+* allora anche il loro contenuto verrà modificato
 */
+
 #include "testLibrary.h"
 #include <stdio.h>
 
@@ -47,5 +52,13 @@ int main(int argc, char** argv) {
 		printf("Pow result: %d\n", powResult);
 	}
 	
+	//Testing integerClamp()
+	{
+		int value = 1000, min = 0, max = 100;
+		int clampResult = integerClamp(min, max, value);
+		printf("Clamp result: %d\n", clampResult);
+	}
+
+
 	return 0;
 }

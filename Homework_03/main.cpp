@@ -29,6 +29,22 @@
 * allora anche il loro contenuto verrà modificato
 */
 
+//Reference & Copy params
+/*
+* int customInteger;
+* functionPtr(&customInteger); //è possibile passare 0 come indirizzo del puntatore
+* functionRef(customInteger); //non è possibile passare altro che non sia una reference
+* 
+* void functionRef(int& refParam){
+*	refParam=5;
+* }
+* 
+* void functionPtr(int* ptrParam){
+*	*prtParam=5;
+* }
+* 
+*/
+
 #include "testLibrary.h"
 #include <stdio.h>
 

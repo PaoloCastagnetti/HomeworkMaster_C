@@ -33,3 +33,5 @@ float floatClamp(float minValue, float maxValue, float value);
 */
 void integerVariableSwap(int* firstVar, int* secondVar);
 void floatVariableSwap(float* firstVar, float* secondVar);
+
+void* ARGBlister(int* var);

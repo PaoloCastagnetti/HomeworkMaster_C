@@ -55,8 +55,8 @@ void floatVariableSwap(float* firstVar, float* secondVar) {
 	*firstVar = tmp;
 }
 
-void* ARGBlister(int* var) {
-	//int* ptr = var;
-	//((char*)ptr) = 0;
-}
+//void* ARGBlister(int* var) {
+//	//int* ptr = var;
+//	//((char*)ptr) = 0;
+//}
 #endif // !myLibrary_Definition

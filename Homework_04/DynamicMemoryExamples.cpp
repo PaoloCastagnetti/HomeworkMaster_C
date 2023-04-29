@@ -1,5 +1,5 @@
 #include <stdlib.h>
-int main() {
+int test2() {
 
 	//measure unit: byte 
 	
@@ -14,12 +14,12 @@ int main() {
 
 	//C++ style dynamic allocation
 	//void* operator new(size_t sz); allocates sz bytes
-	int* ptr = new int;
+	int* ptr2 = new int;
 	int* fptr = new int(5);
 	//void* operator new[](size_t sz); allocates sz bytes
 	int* aptr = new int[5];
 	//void operator delete(void* ptr); frees a memory block
-	delete ptr;
+	delete ptr2;
 	delete fptr;
 	//void operator delete[](void* ptr); frees a memory block
 	delete[] aptr;

@@ -1,4 +1,4 @@
-int main() {
+int test1() {
 
 	//4 type of declaration in c++ for arrays
 	int myArray[3]; //only declaration

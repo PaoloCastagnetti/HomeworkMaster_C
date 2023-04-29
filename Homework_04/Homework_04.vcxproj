@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayExamples.cpp" />
+    <ClCompile Include="ButtonExample.cpp" />
+    <ClCompile Include="DynamicMemoryExamples.cpp" />
+    <ClCompile Include="library.h" />
+    <ClCompile Include="libraryImplementation.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="StringExamples.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

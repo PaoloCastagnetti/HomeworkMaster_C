@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int bellNumberFunctionPrinter(int bellNumber) {
 	int** matrix = new int*[bellNumber];
 	int finalBellNumber = 0;

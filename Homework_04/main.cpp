@@ -1,6 +1,5 @@
-#include <string>
-#include <wchar.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "library.h"
 
 int add(int op1, int op2) {
@@ -36,5 +35,25 @@ int main(int argc, char** argv) {
 		printf("Bell number of %d is %d\n", n, bellNumber);
 	}
 	
+	//string concatenation
+	{
+		char strFirstVar[] = "roba";
+		char strSeconfVar[] = "robaccia";
+		char res[(sizeof(strFirstVar) + sizeof(strSeconfVar))];
+		int j = 0;
+		for (int index = 0; index < sizeof(res); ++index) {
+			if (index < sizeof(strFirstVar)) {
+				if (strFirstVar[index] == 0) {
+					continue;
+				}
+				res[index] = strFirstVar[index];
+			}
+			else {
+				res[index-1] = strSeconfVar[j];
+				++j;
+			}
+		}
+		printf("%s", res);
+	}
 	return 0;
 }

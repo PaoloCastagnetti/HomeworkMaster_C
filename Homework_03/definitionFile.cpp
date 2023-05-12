@@ -36,16 +36,14 @@ int integerClamp(int minValue, int maxValue, int value) {
 		return value;
 	}
 	if (value < minValue) return minValue;
-	if (value > maxValue) return maxValue;
-	return 0;
+	return maxValue;
 }
 float floatClamp(float minValue, float maxValue, float value) {
 	if (value >= minValue && value <= maxValue) {
 		return value;
 	}
 	if (value < minValue) return minValue;
-	if (value > maxValue) return maxValue;
-	return 0.f;
+	return maxValue;
 }
 
 //definition of variableSwap

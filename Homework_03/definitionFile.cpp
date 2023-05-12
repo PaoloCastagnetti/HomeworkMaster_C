@@ -22,7 +22,12 @@ int integerPow(int base, int exponent) {
 	for (int i = 0; i < exponent; ++i) {
 		result *= base;
 	}
-	return result;
+	if (exponent > 0)
+		return result;
+	else if (exponent < 0)
+		return (1 / result);
+	else
+		return 1;
 }
 
 //definition of integerClamp

@@ -93,35 +93,35 @@ void SWAP::VariablesSwap(float* firstVar, float* secondVar) {
 }
 
 //LinkedList
-struct Node {
-	void* value;
-	Node* Next;
-};
-Node* newListNode(void* data) {
-	Node* node = new Node;
-	node->value = data;
-	node->Next = NULL;
-	return node;
-}
-void insertNewListNode(Node** root, void* data) {
-	Node* node = newListNode(data);
-	Node* ptr;
-	if (*root == NULL) {
-		*root = node;
-	}
-	else {
-		ptr = *root;
-		while (ptr->Next != NULL) {
-			ptr = ptr->Next;
-		}
-		ptr->Next = node;
-	}
-}
-Node* createLinkedList(void* value) {
-	Node* root = NULL;
-	insertNewListNode(&root, value);
-	return root;
-}
+//struct Node {
+//	void* value;
+//	Node* Next;
+//};
+//Node* newListNode(void* data) {
+//	Node* node = new Node;
+//	node->value = data;
+//	node->Next = NULL;
+//	return node;
+//}
+//void insertNewListNode(Node** root, void* data) {
+//	Node* node = newListNode(data);
+//	Node* ptr;
+//	if (*root == NULL) {
+//		*root = node;
+//	}
+//	else {
+//		ptr = *root;
+//		while (ptr->Next != NULL) {
+//			ptr = ptr->Next;
+//		}
+//		ptr->Next = node;
+//	}
+//}
+//Node* createLinkedList(void* value) {
+//	Node* root = NULL;
+//	insertNewListNode(&root, value);
+//	return root;
+//}
 
 int insertCoin(int wallet, int money) {
 	return (wallet + money);

@@ -30,6 +30,10 @@ public:
 	* @return an instance of the class
 	*/
 	MyClass(const MyClass& clone);
+	/*
+	* @brief MyClass copy deconstructor
+	*/
+	~MyClass();
 
 private:
 	int privateVariable;

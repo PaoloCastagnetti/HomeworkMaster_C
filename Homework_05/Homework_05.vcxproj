@@ -128,12 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="library.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedListNode.cpp" />
+    <ClCompile Include="LinkedListNode.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="namespaces.cpp" />
     <ClCompile Include="testClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="testClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

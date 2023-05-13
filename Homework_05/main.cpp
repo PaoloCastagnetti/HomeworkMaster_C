@@ -1,6 +1,7 @@
 #include <iostream>
 #include "library.h"
 #include "testClass.h"
+#include "LinkedList.h"
 //Enum definition
 enum Colors {
 	White = 0,
@@ -67,6 +68,14 @@ int main(int argc, char** argv) {
 		instance->setPrivateVariable(10);
 		privVar = instance->getPrivateVariable();
 		std::cout << "Private variable: " << privVar << std::endl;
+	}
+
+	//Linked list class usage
+	{
+		int data = 5;
+		LinkedList* list = new LinkedList();
+		list->insertNode((void*)&data);
+		list->printList();
 	}
 	return 0;
 }

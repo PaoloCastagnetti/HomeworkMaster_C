@@ -1,5 +1,6 @@
 #include <iostream>
 #include "library.h"
+#include "testClass.h"
 //Enum definition
 enum Colors {
 	White = 0,
@@ -26,38 +27,43 @@ int main(int argc, char** argv) {
 	}
 	//Enum usage
 	{
-		Colors colors;
-		colors = Colors::White;
+		/*Colors colors;
+		colors = Colors::White;*/
 	}
 	//Struct usage
 	{
-		myStruct sstruct;
+		/*myStruct sstruct;
 		sstruct.intValue = 0;
-		sstruct.charValue = 's';
+		sstruct.charValue = 's';*/
 	}
 	//Union usage
 	{
-		Color myColor;
+		/*Color myColor;
 		myColor.ARGB = 64;
-		//std::cout << "Color 64: " << myColor.bytes << std::endl;
+		std::cout << "Color 64: " << myColor.bytes << std::endl;*/
 	}
-	
 	//Linked list
 	{
-		int data = 5;
-		Node* root = createLinkedList((void*)&data);
+		/*int data = 5;
+		Node* root = createLinkedList((void*)&data);*/
 	}
-
 	//State machine
 	{
-		std::cout << "Start LoopCycle" << std::endl;
+		/*std::cout << "Start LoopCycle" << std::endl;
 		int wallet = 0;
 		int (*stat) (int, int);
 		while (true) {
 			break;
 		}
-		std::cout << "End LoopCycle" << std::endl;
+		std::cout << "End LoopCycle" << std::endl;*/
 	}
 
+	//Class usage
+	{
+		MyClass instance = MyClass();
+		std::cout << "Private variable: " << instance.getPrivateVariable() << std::endl;
+		instance.setPrivateVariable(10);
+		std::cout << "Private variable: " << instance.getPrivateVariable() << std::endl;
+	}
 	return 0;
 }

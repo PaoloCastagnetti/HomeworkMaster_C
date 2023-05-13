@@ -130,9 +130,11 @@
     <ClCompile Include="library.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="namespaces.cpp" />
+    <ClCompile Include="testClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h" />
+    <ClInclude Include="testClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

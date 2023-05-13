@@ -60,10 +60,13 @@ int main(int argc, char** argv) {
 
 	//Class usage
 	{
-		MyClass instance = MyClass();
-		std::cout << "Private variable: " << instance.getPrivateVariable() << std::endl;
-		instance.setPrivateVariable(10);
-		std::cout << "Private variable: " << instance.getPrivateVariable() << std::endl;
+		//Good practice: use a pointer to the object instead of making it a simple instance.
+		MyClass* instance = new MyClass();
+		int privVar = instance->getPrivateVariable();
+		std::cout << "Private variable: " << privVar << std::endl;
+		instance->setPrivateVariable(10);
+		privVar = instance->getPrivateVariable();
+		std::cout << "Private variable: " << privVar << std::endl;
 	}
 	return 0;
 }

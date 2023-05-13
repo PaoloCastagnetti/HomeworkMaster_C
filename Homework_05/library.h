@@ -4,7 +4,7 @@
 * @param bellNumber contain the input number to calculate
 * @return The bell number
 */
-int bellNumberFunctionPrinter(int bellNumber);
+int bellNumberFunctionPrinter(const int bellNumber);
 
 /*
 * @brief integerAddingFunction adds two variable even if one is int and the other is float
@@ -36,32 +36,44 @@ int integerAddingFunction(int firstValue, float secondValue);
 */
 int Pow(int base, int exponent);
 
-/*
-* @brief Clamp a variable in a defined range
-* @param minValue is the minimum value the variable can have
-* @param maxValue is the maximum value the variable can have
-* @param value is the passed value
-* @return return the clamped value
-*/
-int Clamp(int minValue, int maxValue, int value);
-/*
-* @brief Clamp a variable in a defined range
-* @param minValue is the minimum value the variable can have
-* @param maxValue is the maximum value the variable can have
-* @param value is the passed value
-* @return return the clamped value
-*/
-float Clamp(float minValue, float maxValue, float value);
+namespace CLAMP {
+	/*
+	* @brief Clamp a variable in a defined range
+	* @param minValue is the minimum value the variable can have
+	* @param maxValue is the maximum value the variable can have
+	* @param value is the passed value
+	* @return return the clamped value
+	*/
+	int Clamp(int minValue, int maxValue, int value);
+	/*
+	* @brief Clamp a variable in a defined range
+	* @param minValue is the minimum value the variable can have
+	* @param maxValue is the maximum value the variable can have
+	* @param value is the passed value
+	* @return return the clamped value
+	*/
+	float Clamp(float minValue, float maxValue, float value);
+}
 
-/*
-* @brief swap the value of two given variables
-* @param firstVar has the first value to swap
-* @param secondVar has the second value to swap
-*/
-void VariablesSwap(int* firstVar, int* secondVar);
-/*
-* @brief swap the value of two given variables
-* @param firstVar has the first value to swap
-* @param secondVar has the second value to swap
-*/
-void VariablesSwap(float* firstVar, float* secondVar);
+namespace SWAP {
+	/*
+	* @brief swap the value of two given variables
+	* @param firstVar has the first value to swap
+	* @param secondVar has the second value to swap
+	*/
+	void VariablesSwap(int* firstVar, int* secondVar);
+	/*
+	* @brief swap the value of two given variables
+	* @param firstVar has the first value to swap
+	* @param secondVar has the second value to swap
+	*/
+	void VariablesSwap(float* firstVar, float* secondVar);
+}
+
+struct Node;
+Node* newListNode(void* data);
+void insertNewListNode(Node** root, void* data);
+Node* createLinkedList(void* value);
+
+int insertCoin(int wallet, int money);
+int giveChange(int wallet);

@@ -3,9 +3,10 @@
 //----------
 
 #include <stdio.h>
+#include "library.h"
 
 //definition of a bell number generator
-int bellNumberFunctionPrinter(int bellNumber) {
+int bellNumberFunctionPrinter(const int bellNumber) {
 	int** matrix = new int* [bellNumber];
 	int finalBellNumber = 0;
 
@@ -64,14 +65,14 @@ int Pow(int base, int exponent) {
 }
 
 //definition of integerClamp
-int Clamp(int minValue, int maxValue, int value) {
+int CLAMP::Clamp(int minValue, int maxValue, int value) {
 	if (value >= minValue && value <= maxValue) {
 		return value;
 	}
 	if (value < minValue) return minValue;
 	return maxValue;
 }
-float Clamp(float minValue, float maxValue, float value) {
+float CLAMP::Clamp(float minValue, float maxValue, float value) {
 	if (value >= minValue && value <= maxValue) {
 		return value;
 	}
@@ -80,13 +81,54 @@ float Clamp(float minValue, float maxValue, float value) {
 }
 
 //definition of variableSwap
-void VariablesSwap(int* firstVar, int* secondVar) {
+void SWAP::VariablesSwap(int* firstVar, int* secondVar) {
 	int tmp = *secondVar;
 	*secondVar = *firstVar;
 	*firstVar = tmp;
 }
-void VariablesSwap(float* firstVar, float* secondVar) {
+void SWAP::VariablesSwap(float* firstVar, float* secondVar) {
 	float tmp = *secondVar;
 	*secondVar = *firstVar;
 	*firstVar = tmp;
+}
+
+//LinkedList
+struct Node {
+	void* value;
+	Node* Next;
+};
+Node* newListNode(void* data) {
+	Node* node = new Node;
+	node->value = data;
+	node->Next = NULL;
+	return node;
+}
+void insertNewListNode(Node** root, void* data) {
+	Node* node = newListNode(data);
+	Node* ptr;
+	if (*root == NULL) {
+		*root = node;
+	}
+	else {
+		ptr = *root;
+		while (ptr->Next != NULL) {
+			ptr = ptr->Next;
+		}
+		ptr->Next = node;
+	}
+}
+Node* createLinkedList(void* value) {
+	Node* root = NULL;
+	insertNewListNode(&root, value);
+	return root;
+}
+
+int insertCoin(int wallet, int money) {
+	return (wallet + money);
+}
+
+int giveChange(int wallet) {
+	int price = 2;
+	if (wallet > price)
+		return (wallet - price);
 }

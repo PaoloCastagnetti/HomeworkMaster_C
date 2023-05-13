@@ -1,4 +1,5 @@
 #include <iostream>
+#include "library.h"
 //Enum definition
 enum Colors {
 	White = 0,
@@ -23,20 +24,40 @@ int main(int argc, char** argv) {
 	if (argc != 1) {
 		return 0;
 	}
-
 	//Enum usage
-	Colors colors;
-	colors = Colors::White;
-
+	{
+		Colors colors;
+		colors = Colors::White;
+	}
 	//Struct usage
-	myStruct sstruct;
-	sstruct.intValue = 0;
-	sstruct.charValue = 's';
-
+	{
+		myStruct sstruct;
+		sstruct.intValue = 0;
+		sstruct.charValue = 's';
+	}
 	//Union usage
-	Color myColor;
-	myColor.ARGB = 64;
-	//std::cout << "Color 64: " << myColor.bytes << std::endl;
+	{
+		Color myColor;
+		myColor.ARGB = 64;
+		//std::cout << "Color 64: " << myColor.bytes << std::endl;
+	}
 	
+	//Linked list
+	{
+		int data = 5;
+		Node* root = createLinkedList((void*)&data);
+	}
+
+	//State machine
+	{
+		std::cout << "Start LoopCycle" << std::endl;
+		int wallet = 0;
+		int (*stat) (int, int);
+		while (true) {
+			break;
+		}
+		std::cout << "End LoopCycle" << std::endl;
+	}
+
 	return 0;
 }

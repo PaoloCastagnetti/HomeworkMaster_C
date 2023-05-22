@@ -2,6 +2,7 @@
 #include "library.h"
 #include "testClass.h"
 #include "LinkedList.h"
+#include "BinaryTree.h"
 //Enum definition
 enum Colors {
 	White = 0,
@@ -76,6 +77,19 @@ int main(int argc, char** argv) {
 		LinkedList* list = new LinkedList();
 		list->insertNode((void*)&data);
 		list->printList();
+	}
+
+	//Binary tree usage
+	{
+		MyBinaryTree tree;
+		for (int i = 0; i < 10; ++i) {
+			tree.insert(i);
+		}
+
+		// Printing tree elements using in-order traversal
+		std::cout << "In-order traversal: ";
+		tree.inOrderTraversal();
+		std::cout << std::endl;
 	}
 	return 0;
 }

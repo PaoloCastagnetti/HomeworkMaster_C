@@ -1,8 +1,9 @@
+#pragma once
 class Node {
 public:
     void* data;
     Node* next;
-
+    
     /*
     * @brief Node constructor
     * @return the instance of a Node of a LinkedList

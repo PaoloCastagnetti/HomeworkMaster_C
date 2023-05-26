@@ -1,3 +1,4 @@
+#pragma once
 class BTNode {
 public:
     int data;

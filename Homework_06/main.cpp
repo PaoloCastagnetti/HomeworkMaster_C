@@ -38,4 +38,13 @@ int main(int argc, char** argv) {
 
 	//per creare le interfacce si creano dei metodi virtuali 'puri' con assegnazione a 0
 	//ex. virtual int Area() = 0;
+
+	//Il distruttore deve essere sempre virtuale
+	// ~ :=> ALT + 126
+
+	//Puntatori a funzioni membro, non sono puntatori a funzione
+
+	//Templates
+	//Permette di creare classi e funzioni generiche
+	//template <typename T, typename U> T add(T first, U second);
 }
